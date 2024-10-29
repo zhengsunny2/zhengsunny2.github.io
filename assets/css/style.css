@@ -99,8 +99,7 @@ footer {
 .footer-container {
   display: flex;
   flex-direction: row;
-  height: 130px;
-  padding: 20px 100px;
+  padding: 30px 100px;
   align-items: center;
 }
 
@@ -114,7 +113,7 @@ footer {
   flex-direction: row;
   gap: 40px;
   align-items: center;
-  margin-top: 20px;
+
   color: var(--blanc);
   font-size: 22px;
 }
@@ -134,7 +133,7 @@ margin: 0px auto;
 }
 
 footer hr {
-  margin: 10px 50px;
+  margin: 0px 50px;
   color: var(--blanc);
   border-color: var(--blanc);
 }
@@ -143,6 +142,7 @@ footer hr {
   color: var(--blanc);
   font-size: 10px;
   padding-bottom: 20px;
+  padding-top: 10px;
 }
 /*footer*/
 
@@ -565,7 +565,7 @@ margin-top: 15px;
 
   #info1{
     border: 2px solid var(--green);
-    background-color: #e1fab9;;
+    background-color: #e1fab9;
   }
 
   #info2{
@@ -590,25 +590,22 @@ margin-top: 15px;
   color: #fff;
   border: 0px solid transparent;
   border-radius: 10px;
-  margin-top: 10px;
+  margin-left: 30px;
   font-size: 12px;
   cursor: pointer;
 }
 
 .infotop{
   display: flex;
+  flex-direction: row;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    
 }
-.infoleft{
-  display: flex;
-  flex-direction: column;
-  line-height: 20px;
-}
-.inforight{
-font-size: 40px;
-position: relative;
-margin-left: 75px
+.infotop p{
+  text-align: left;
+  color:#333333;
+  line-height: 24px;
 }
 
 .infobottom{
@@ -686,7 +683,7 @@ margin-left: 75px
 #contact h2,#contact p{
   color: var(--noir);
   text-align: left;
-  line-height: 50px;
+  line-height: 30px;
 }
         
 #contact .top{
@@ -854,4 +851,144 @@ height: 0;
  position: relative;
  top: 10px;
  left: 90%;
+}
+
+footer .spant{
+  color: white;
+  margin-right: 20px;
+}
+
+
+
+#infoBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 960px;
+  padding: 20px;
+  border: 2px solid var(--pink);
+  background-color: #ffe4eb;
+  line-height: 24px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 1000;
+}
+#infoBox p{
+  color: #333333;
+  text-align: left;
+}
+
+
+.hidden {
+  display: none;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+.flip-card1 {
+  background-color: transparent;
+  width: 260px;
+  height: 220px;
+  perspective: 1000px; 
+  border: 2px solid var(--green);
+  border-radius: 10px;
+}
+  .flip-card2 {
+    background-color: transparent;
+    width: 260px;
+    height: 220px;
+    perspective: 1000px; 
+border: 2px solid var(--orange);
+border-radius: 10px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+}
+
+.flip-card1:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  border-radius: 10px;
+}
+.flip-card2:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  border-radius: 10px;
+}
+
+.flip-card-front, .flip-card-back1, .flip-card-back2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+ 
+}
+
+.imgflip{
+  width: 260px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.flip-card-front {
+  background-color: #e1fab9;
+  color: black;
+  border-radius: 10px;
+}
+
+.flip-card-back1 {
+  color: white;
+  transform: rotateY(180deg);
+  background-color: var(--green);
+  border-radius: 10px;
+}
+
+.flip-card-back2 {
+  color: white;
+  transform: rotateY(180deg);
+  background-color: var(--orange);
+  border-radius: 10px;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 8px;
+  backface-visibility: hidden;
+  transition: opacity 0.6s;
+}
+.line{
+display: flex;
+flex-direction: column;
+justify-content:center;
+align-items: center;
+width: 100%;
+height: 100%;
+line-height: 24px;
 }
